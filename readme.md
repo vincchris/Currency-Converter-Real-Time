@@ -60,14 +60,14 @@ Which currency do you want to convert:
     1. IDR to USD
     2. USD to IDR
     3. IDR to CNY
-  Pilihan : 1
-Berapa Uang Yang anda ingin konversikan : 100000
+  Answer : 1
+How much money do you want to convert : 100000
 100000 IDR = 6.3500 USD
 
-Apakah anda ingin menukarkan lagi ?
-1. Ya
-2. Tidak
-Answer : tidak
+Do you want to exchange again ?
+1. Yes
+2. No
+Answer : No
 ```
 
 ## File Structure
