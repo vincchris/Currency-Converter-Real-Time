@@ -1,75 +1,90 @@
-Simple Currency Converter
-This project is a simple Python script for converting currencies using real-time exchange rate data from the ExchangeRate-API.
+# Currency Converter
 
-✨ Key Features
-Converts IDR (Indonesian Rupiah) to USD (US Dollar).
+A simple Python-based currency conversion application that uses the ExchangeRate API to get real-time exchange rates.
 
-Converts USD (US Dollar) to IDR (Indonesian Rupiah).
+## Features
 
-Converts IDR (Indonesian Rupiah) to CNY (Chinese Yuan).
+- Convert IDR to USD
+- Convert USD to IDR
+- Convert IDR to CNY (Chinese Yuan)
+- Real-time exchange rates from ExchangeRate API
+- User-friendly command-line interface
+- Option to perform multiple conversions
 
-Secure use of an API Key via environment variables (.env).
+## Prerequisites
 
-🛠️ Prerequisites
-You need Python 3.x installed on your system.
+Before running the application, make sure you have:
 
-Python Dependencies
-This project uses two Python libraries:
+- Python 3.x installed
+- `requests` and `python-dotenv` packages
+- API Key from [ExchangeRate-API](https://www.exchangerate-api.com/)
 
-requests: For making HTTP requests to the API.
+## Installation
 
-python-dotenv: For loading environment variables from a .env file.
+1. Clone or download this repository
 
-You can install these dependencies using pip:
-
-Bash
-
+2. Install required dependencies:
+```bash
 pip install requests python-dotenv
+```
 
-🚀 Setup and Installation
-Follow the steps below to set up and run the script.
+3. Create a `.env` file in the root directory:
+```
+API_KEYS=your_api_key_here
+```
 
-1. Get an API Key
-Sign up for a free API Key from ExchangeRate-API.
+4. Get a free API key from [ExchangeRate-API](https://www.exchangerate-api.com/) and add it to the `.env` file
 
-Once signed up, you will get your API key.
+## Usage
 
-2. Environment Configuration
-Create a new file named .env in the same directory as your Python source code.
+1. Run the script:
+```bash
+python main.py
+```
 
-Add your API key to the .env file in the following format:
+2. Select the desired conversion type:
+   - `1` - IDR to USD
+   - `2` - USD to IDR
+   - `3` - IDR to CNY
 
-API_KEYS="YOUR_API_KEY_HERE"
-Note: Make sure to replace "YOUR_API_KEY_HERE" with your actual API key.
+3. Enter the amount of money you want to convert
 
-3. Run the Script
-Once the dependencies are installed and the .env file is configured, you can run the script from your terminal:
+4. The conversion result will be displayed with 4 decimal places
 
-Bash
+5. Choose whether to perform another conversion or exit
 
-python your_file_name.py
-(Replace your_file_name.py with the name of your Python file, e.g., converter.py)
+## Contoh Output
 
-🖥️ How to Use
-After running the script, you will be prompted to choose the conversion type:
-
+```
 Which currency do you want to convert:
     1. IDR to USD
     2. USD to IDR
     3. IDR to CNY
-Pilihan :
-Enter the number corresponding to your conversion choice (1, 2, or 3).
+  Pilihan : 1
+Berapa Uang Yang anda ingin konversikan : 100000
+100000 IDR = 6.3500 USD
 
-The script will then ask you to enter the amount of money you wish to convert.
+Apakah anda ingin menukarkan lagi ?
+1. Ya
+2. Tidak
+Answer : tidak
+```
 
-The conversion result will be displayed.
+## File Structure
 
-You will be asked if you want to perform another conversion. Enter Ya or 1 to continue, or anything else to exit.
+```
+.
+├── main.py          # Main application file
+├── .env            # API key configuration file (not committed)
+└── README.md       # Documentation
+```
 
-📝 Additional Notes
-All exchange rate requests use USD as the base currency.
+## Notes
 
-Exchange rates are fetched in real-time from ExchangeRate-API (subject to the limitations of your plan).
+- Make sure you have an active internet connection as the application requires API access
+- The free API has request limits, check ExchangeRate-API documentation for details
+- The `.env` file should be added to `.gitignore` for security
 
-🤝 Contributing
-If you have suggestions for improvements or new features, please open an issue or submit a pull request.
+## License
+
+This project is free to use for learning and development purposes.
